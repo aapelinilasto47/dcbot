@@ -25,6 +25,7 @@ def run():
 
 # Käynnistä Flask erillisessä säikeessä
 t = threading.Thread(target=run)
+t.daemon = True
 t.start()
 
 krisu = 312961264286695424
