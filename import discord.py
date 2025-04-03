@@ -626,5 +626,4 @@ async def randomadc(interaction: discord.Interaction):
 
 
 
-client.run('MTMzMDg2NDE2MDUyNzA5Mzg5Mw.GodYfg.DfS82AHQ3C73-q6Gi9XESJr5gOZavLUz50oZ1g')
-
+client.loop.create_task(client.start(os.getenv('MTMzMDg2NDE2MDUyNzA5Mzg5Mw.GodYfg.DfS82AHQ3C73-q6Gi9XESJr5gOZavLUz50oZ1g')))
