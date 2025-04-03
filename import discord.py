@@ -1,4 +1,5 @@
 import discord
+import os
 import openai
 from random import randint
 import random
