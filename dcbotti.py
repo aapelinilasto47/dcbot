@@ -48,9 +48,7 @@ vitsit = ['Miks Samppaa ei voi pyytää mukaan saunailtaan? Sil on liian pitkät
             'Jos Cape eksyis metsässä, niin miten sen löytää? Seuraa hikisen koiran hajua',
             'Jos Krisu haaksirikkoutuis autiolle saarelle, niin mitä se ottais mukaan? Sen kryptot']
 
-OPENAI_API_KEY = "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"
 
-openai.api_key = OPENAI_API_KEY
 
 intents = discord.Intents.default()
 intents.message_content = True
