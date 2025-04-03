@@ -52,7 +52,10 @@ OPENAI_API_KEY = "sk-proj-JXKAR4uvqTnUDbVOUjVOWxOQ5psi5sPp71yvKfInNWeTqTwlKozfHE
 
 openai.api_key = OPENAI_API_KEY
 
-
+intents = discord.Intents.default()
+intents.message_content = True
+ 
+client = Client(intents=intents)
 
 class Client(commands.Bot):
     async def on_ready(self):
