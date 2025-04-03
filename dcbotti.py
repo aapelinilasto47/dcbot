@@ -617,7 +617,7 @@ async def randomadc(interaction: discord.Interaction):
 # Asynkroninen pääfunktio
 async def main():
     print("Käynnistetään botti...")
-    await client.start(os.getenv('MTMzMDg2NDE2MDUyNzA5Mzg5Mw.GodYfg.DfS82AHQ3C73-q6Gi9XESJr5gOZavLUz50oZ1g'))
+    await client.start(os.getenv('DISCORD_TOKEN'))
 
 # Flask + botti yhdessä
 if __name__ == "__main__":
