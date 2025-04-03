@@ -52,15 +52,7 @@ OPENAI_API_KEY = "sk-proj-JXKAR4uvqTnUDbVOUjVOWxOQ5psi5sPp71yvKfInNWeTqTwlKozfHE
 openai.api_key = OPENAI_API_KEY
 
 
-    
-async def main():
-    print("Käynnistetään botti...")
-    await bot.start(os.getenv("DISCORD_BOT_TOKEN"))
 
-# Flask + botti yhdessä
-if __name__ == "__main__":
-    import asyncio
-    asyncio.run(main())  # Ajetaan pääfunktio asynkronisesti        
 
 
 class Client(commands.Bot):
