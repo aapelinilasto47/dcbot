@@ -1,4 +1,5 @@
 import discord
+import os
 
 class Client(discord.Client):
     async def on_ready(self):
