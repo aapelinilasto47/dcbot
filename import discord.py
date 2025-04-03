@@ -10,7 +10,22 @@ import asyncio
 import requests
 
 
+import threading
+import flask
 
+# Luo Flask-palvelu pitämään Railway-prosessi hengissä
+app = flask.Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Botti toimii!"
+
+def run():
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+
+# Käynnistä Flask erillisessä säikeessä
+t = threading.Thread(target=run)
+t.start()
 
 krisu = 312961264286695424
 jani = 277091775812861952
