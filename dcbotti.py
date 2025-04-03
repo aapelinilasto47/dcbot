@@ -1,6 +1,6 @@
 import discord
 import os
-import openai
+
 from random import randint
 import random
 from discord.ext import commands
