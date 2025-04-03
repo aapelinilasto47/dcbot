@@ -625,5 +625,3 @@ if __name__ == "__main__":
     asyncio.run(main())  # Ajetaan pääfunktio asynkronisesti
 
 
-
-client.loop.create_task(client.start(os.getenv('MTMzMDg2NDE2MDUyNzA5Mzg5Mw.GodYfg.DfS82AHQ3C73-q6Gi9XESJr5gOZavLUz50oZ1g')))
