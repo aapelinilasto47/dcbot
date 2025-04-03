@@ -53,7 +53,7 @@ vitsit = ['Miks Samppaa ei voi pyytää mukaan saunailtaan? Sil on liian pitkät
 intents = discord.Intents.default()
 intents.message_content = True
  
-client = Client(intents=intents)
+
 
 class Client(commands.Bot):
     async def on_ready(self):
