@@ -1,1 +1,1 @@
-web: python import discord.py
+web: python dcbotti.py
