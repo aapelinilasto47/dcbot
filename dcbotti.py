@@ -300,7 +300,7 @@ async def ape(interaction: discord.Interaction):
 async def nyt(interaction: discord.Interaction):
     aika = datetime.now()
     suomiaika = aika + timedelta(hours=3)
-    await interaction.response.send_message(f"Nyt on {aika.strftime('%d.%m.%Y %H:%M:%S')}")
+    await interaction.response.send_message(f"Nyt on {suomiaika.strftime('%d.%m.%Y %H:%M:%S')}")
 
 
 @client.tree.command(name="noppa", description="Heittää noppaa", guild=GUILD_ID)
