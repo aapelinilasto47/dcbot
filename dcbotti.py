@@ -5,7 +5,7 @@ from random import randint
 import random
 from discord.ext import commands
 from discord import app_commands
-from datetime import datetime
+from datetime import datetime, timedelta
 import json
 import asyncio
 import requests
