@@ -73,7 +73,7 @@ class Client(commands.Bot):
 
 
 
-    def on_message(self, message):
+    async def on_message(self, message):
         if message.author == self.user:
             return
         
