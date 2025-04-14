@@ -76,6 +76,8 @@ class Client(commands.Bot):
     async def on_message(self, message):
         if message.author == self.user:
             return
+
+        print(f"Vastaan viestiin: {message.content}")
         
         if message.content == 'moi botti':
             await message.channel.send(f'Heipparallaa {message.author}')
