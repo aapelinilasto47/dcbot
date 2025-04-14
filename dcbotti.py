@@ -29,6 +29,9 @@ t = threading.Thread(target=run)
 t.daemon = True
 t.start()
 
+
+DISCORD_TOKEN = "!MTMzMDg2NDE2MDUyNzA5Mzg5Mw.GodYfg.DfS82AHQ3C73-q6Gi9XESJr5gOZavLUz50oZ1g"
+
 krisu = 312961264286695424
 jani = 277091775812861952
 ape = 241562953592078336
