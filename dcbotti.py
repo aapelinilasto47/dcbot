@@ -102,7 +102,7 @@ class Client(commands.Bot):
         if 'nigg' in message.content:
             await message.channel.send(f'{message.author} <--- tämä henkilö on rasisti')
 
-
+        await self.process_commands(message)
 
 
 def get_questions():
