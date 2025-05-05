@@ -92,17 +92,17 @@ class Client(commands.Bot):
 
         print(f"Vastaan viestiin: {message.content}")
         
-        if message.content == 'moi botti':
+        if message.content.lower == 'moi botti':
             await message.channel.send(f'Heipparallaa {message.author}')
 
-        if message.content == 'hyvä botti':
+        if message.content.lower == 'hyvä botti':
             await message.channel.send(f'Kiitos {message.author}!')
             await message.add_reaction('🏆')
 
-        if message.content == 'paska botti':
+        if message.content.lower == 'paska botti':
             await message.channel.send(f'Okei mut aatelkaa kui noloo ois olla tää äijä ---> {message.author}')
 
-        if "tuhma botti" in message.content:
+        if "tuhma botti" in message.content.lower:
             await message.channel.send(f'Mmmh miten tuhma? 🤤')
             await message.add_reaction('🤭')
 
