@@ -534,6 +534,11 @@ async def randomquote(interaction: discord.Interaction):
 async def quote(interaction: discord.Interaction):
     today_quote = get_daily_quote()
     await interaction.response.send_message(f"📢 Quote of the Day:\n{today_quote}")
+
+
+@client.tree.command(name="pv", description="tää pv", guild=GUILD_ID)
+async def pv(interaction: discord.Interaction):
+     await interaction.response.send_message(datetime.date.today())
     
 
 # Asynkroninen pääfunktio
