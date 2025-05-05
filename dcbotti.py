@@ -51,7 +51,13 @@ vitsit = ['Miks Samppaa ei voi pyytää mukaan saunailtaan? Sil on liian pitkät
             'Jos Cape eksyis metsässä, niin miten sen löytää? Seuraa hikisen koiran hajua',
             'Jos Krisu haaksirikkoutuis autiolle saarelle, niin mitä se ottais mukaan? Sen kryptot']
 
-
+quotet = ['“Know thyself.” — Socrates', '“Happiness depends upon ourselves.” — Aristotle', '“Man is disturbed not by things, but by the views he takes of them.” — Epictetus',
+          '“He who has a why to live can bear almost any how.” — Friedrich Nietzsche', '“We are what we repeatedly do. Excellence, then, is not an act, but a habit.” — Aristotle',
+          '“The unexamined life is not worth living.” — Socrates', '“Act only according to that maxim whereby you can, at the same time, will that it should become a universal law.” — Immanuel Kant',
+          '“Do not spoil what you have by desiring what you have not.” — Epicurus', '“It is not length of life, but depth of life.” — Ralph Waldo Emerson', '“The only thing I know is that I know nothing.” — Socrates',
+          '“To live is the rarest thing in the world. Most people exist, that is all.” — Oscar Wilde', '“You must become who you are.” — Friedrich Nietzsche', '“The mind is everything. What you think you become.” — Buddha',
+          '“Be kind, for everyone you meet is fighting a hard battle.” — Attributed to Plato (though debated)', '“Time is a created thing. To say ‘I don’t have time’ is like saying ‘I don’t want to.’” — Laozi']
+          
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -510,7 +516,10 @@ async def randomadc(interaction: discord.Interaction):
     await interaction.response.send_message(f"Random ADC championisi on  ➡️  {adc2}!")
 
 
-
+@client.tree.command(name="quote", description="Arvotaan sinulle viisas aforismi", guild=GUILD_ID)
+async def quote(interaction: discord.Interaction):
+     await interaction.response.send_message(quotet[randint(0, len(vitsit)-1)])
+    
 
     
 
