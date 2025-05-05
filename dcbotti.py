@@ -144,7 +144,10 @@ def get_questions():
     return vastaukset, tarkistus
 
 
-
+def get_daily_quote():
+    today = datetime.date.today()
+    random.seed(today.toordinal())
+    return random.choice(quotet)
 
 
 
@@ -529,10 +532,8 @@ async def quote(interaction: discord.Interaction):
 
 @client.tree.command(name="quote", description="Päivän viisas aforismi!, guild=GUILD_ID)
 async def quote(interaction: discord.Interaction):
-    nyt = datetime.datetime.now()
-    nyt1 = int(nyt.days)
-    pvquote = quotet[nyt1]
-     await interaction.response.send_message(pvquote)
+    today_quote = get_daily_quote()
+    await interaction.response.send_message(f"Tämän päivän viisas lausahdus: \n{today_quote}")
     
 
     
