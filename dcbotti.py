@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 import json
 import asyncio
 import requests
-import datetime
+
 
 import threading
 import flask
@@ -145,7 +145,7 @@ def get_questions():
 
 
 def get_daily_quote():
-    today = datetime.date.today()
+    today = datetime.today().date()
     random.seed(today.toordinal())
     return random.choice(quotet)
 
