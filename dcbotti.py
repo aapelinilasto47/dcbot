@@ -56,7 +56,14 @@ quotet = ['“Know thyself.” — Socrates', '“Happiness depends upon ourselv
           '“The unexamined life is not worth living.” — Socrates', '“Act only according to that maxim whereby you can, at the same time, will that it should become a universal law.” — Immanuel Kant',
           '“Do not spoil what you have by desiring what you have not.” — Epicurus', '“It is not length of life, but depth of life.” — Ralph Waldo Emerson', '“The only thing I know is that I know nothing.” — Socrates',
           '“To live is the rarest thing in the world. Most people exist, that is all.” — Oscar Wilde', '“You must become who you are.” — Friedrich Nietzsche', '“The mind is everything. What you think you become.” — Buddha',
-          '“Be kind, for everyone you meet is fighting a hard battle.” — Attributed to Plato (though debated)', '“Time is a created thing. To say ‘I don’t have time’ is like saying ‘I don’t want to.’” — Laozi']
+          '“Be kind, for everyone you meet is fighting a hard battle.” — Attributed to Plato (though debated)', '“Time is a created thing. To say ‘I don’t have time’ is like saying ‘I don’t want to.’” — Laozi',
+         '“Waste no more time arguing what a good man should be. Be one.” — Marcus Aurelius', '“He who opens a school door, closes a prison.” — Victor Hugo', '“The greater the difficulty, the more glory in surmounting it.” — Epicurus',
+         '“No man ever steps in the same river twice, for it’s not the same river and he’s not the same man.” — Heraclitus', '“What we achieve inwardly will change outer reality.” — Plutarch',
+         '“Even while they teach, men learn.” — Seneca', '“The only journey is the one within.” — Rainer Maria Rilke', '“The meaning of life is to find your gift. The purpose of life is to give it away.” — Pablo Picasso',
+         '“To be is to be perceived.” — George Berkeley', '“Every man takes the limits of his own field of vision for the limits of the world.” — Arthur Schopenhauer', 
+         '“Live as if you were to die tomorrow. Learn as if you were to live forever.” — Mahatma Gandhi', '“Freedom is the freedom to say that two plus two make four.” — George Orwell', 
+         '“Silence is a source of great strength.” — Laozi', '“You can discover more about a person in an hour of play than in a year of conversation.” — Plato', 
+         '“To dare is to lose one’s footing momentarily. Not to dare is to lose oneself.” — Søren Kierkegaard', '“Nature does not hurry, yet everything is accomplished.” — Laozi']
           
 
 intents = discord.Intents.default()
