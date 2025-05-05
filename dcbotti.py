@@ -530,7 +530,7 @@ async def randomadc(interaction: discord.Interaction):
 async def quote(interaction: discord.Interaction):
      await interaction.response.send_message(quotet[randint(0, len(vitsit)-1)])
 
-@client.tree.command(name="quote", description="Näytä päivän sitaatti", guild=discord.Object(id=GUILD_ID))
+@client.tree.command(name="quote", description="Näytä päivän sitaatti", guild=GUILD_ID)
 async def quote(interaction: discord.Interaction):
     today_quote = get_daily_quote()
     await interaction.response.send_message(f"📢 Quote of the Day:\n{today_quote}")
