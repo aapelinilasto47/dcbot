@@ -538,7 +538,7 @@ async def quote(interaction: discord.Interaction):
 
 @client.tree.command(name="pv", description="tää pv", guild=GUILD_ID)
 async def pv(interaction: discord.Interaction):
-     await interaction.response.send_message(datetime.date.today())
+     await interaction.response.send_message(str(datetime.date.today()))
     
 
 # Asynkroninen pääfunktio
