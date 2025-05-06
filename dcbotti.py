@@ -157,7 +157,7 @@ intents.message_content = True
 client = Client(command_prefix='!', intents=intents)
 
 
-GUILD_ID = discord.Object(id=548149996462145546)
+GUILD_ID = discord.Object(id=1196849352874926080)
 
 
     
