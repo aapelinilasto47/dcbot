@@ -112,7 +112,7 @@ class Client(commands.Bot):
         if 'nigg' in message.content:
             await message.channel.send(f'{message.author} <--- tämä henkilö on rasisti')
 
-        if 'fortnite' in message.content:
+        if 'fortnite' in message.content.lower():
             viesti = "☝️😃Number One#️⃣1️⃣Victory Royale🏆🥇Yeah, Fortnite🏕️we bout to👇get down (get down)⬇️Ten🔟kills☠️on🔛the board🎯right now⏱️Just wiped out💥Tomato🍅Town🏡My friend👯‍♂️just got🙇🏻‍♂️downed😱I revived💉him😇now we’re heading🏃🏃‍♂️south🧭bound⬇️Now we’re in👉the Pleasent😊Park🏞️streets🏘️Look👀at the map🗺️go to the mark✅sheet📝Take me🤝to your Xbox🎮📺to play🕹️Fortnite🏕️today📅You can take🤝me🏃‍♂️to Moist💦Mire🐊but not🙅🏻‍♂️Loot💰Lake🌊🤢I'd really love❤️🥰to chug jug🍻with you😳👉👈We can be pro😎Fortnite🏕️gamers👾🎮🕹️"
             await message.channel.send(viesti)
 
