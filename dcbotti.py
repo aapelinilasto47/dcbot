@@ -41,15 +41,7 @@ cape = 422427713052082177
 
 lista = [krisu, jani, ape, jokke, samppa, cape]
 
-vitsit = ['Miks Samppaa ei voi pyytää mukaan saunailtaan? Sil on liian pitkät sormet',
-          'Miks Jokke ei voi hankkia hamsteria? Muuten se pääsis ekaa kertaa liian syvälle',
-            'Miks Krisu ei voi perustaa OnlyFanssia? Kääpiöporno on laitonta',
-            'Miks Ape ei saa tyttöystävää? Se ei oo löytäny viel ketää tyttöö kellä ois penis',
-            'Miks Janin autismia ei oo vieläkään tutkittu? Jokanen lääkäri on tappanu ittensä Janin tapaamisen jälkeen',
-            'Jos Ape alkais käymää salilla nii se sais kymmenkertaisesti enemmän naisia! Eli siis 0 x 10 = 0',
-            'Miks Jokke istuu mielummin ku seisoo? Sillä on ollu seisomisen kaa ongelmia...',
-            'Jos Cape eksyis metsässä, niin miten sen löytää? Seuraa hikisen koiran hajua',
-            'Jos Krisu haaksirikkoutuis autiolle saarelle, niin mitä se ottais mukaan? Sen kryptot']
+
 
 quotet = ['“Know thyself.” — Socrates', '“Happiness depends upon ourselves.” — Aristotle', '“Man is disturbed not by things, but by the views he takes of them.” — Epictetus',
           '“He who has a why to live can bear almost any how.” — Friedrich Nietzsche', '“We are what we repeatedly do. Excellence, then, is not an act, but a habit.” — Aristotle',
@@ -195,9 +187,13 @@ async def jako(interaction: discord.Interaction, number1: int, number2: int):
 async def randomi(interaction: discord.Interaction, number1: int, number2: int):
     await interaction.response.send_message(f'random luku väliltä {number1}-{number2} on {randint(number1, number2)}')
 
-@client.tree.command(name='roast', description='Roastaan jonkun!', guild=GUILD_ID)
+@client.tree.command(name='roast', description='Roastaan sinut!', guild=GUILD_ID)
 async def vitsi(interaction: discord.Interaction):
-    await interaction.response.send_message(vitsit[randint(0, len(vitsit)-1)])
+    with open("mustan_huumorin_loukkaukset.txt", "r") as f:
+        roast = f.readlines()
+        r1 = roast[randint(0,len(roast)-1]
+        await interaction.response.send_message(r1)
+        
 
 @client.tree.command(name="valitse", description="Valitsee satunnaisesti annetusta listasta! Erota vaihtoehdot pilkulla  --> , ", guild=GUILD_ID)
 async def valitse(interaction: discord.Interaction, vaihtoehdot: str):
