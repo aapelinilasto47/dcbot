@@ -172,13 +172,13 @@ async def laskin(interaction: discord.Interaction, syöte: str):
     st = syöte.split()
     luku1 = int(st[0])
     luku2 = int(st[2])
-    if st[1] = "+":
+    if st[1] == "+":
         viesti = f"{luku1} + {luku2} = {luku1 + luku2}"
-    elif st[1] = "-":
+    elif st[1] == "-":
         viesti = f"{luku1} - {luku2} = {luku1 - luku2}"
-    elif st[1] = "*":
+    elif st[1] == "*":
         viesti = f"{luku1} * {luku2} = {luku1 * luku2}"
-    elif st[1] = "/":
+    elif st[1] == "/":
         viesti = f"{luku1} / {luku2} = {luku1 / luku2}"
     else:
         await interaction.response.send_message("Virheellinen syöte, yritä uudelleen!")
