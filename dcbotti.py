@@ -186,13 +186,6 @@ async def jako(interaction: discord.Interaction, number1: int, number2: int):
 @client.tree.command(name='random', description='random luku antamallasi välillä', guild=GUILD_ID)
 async def randomi(interaction: discord.Interaction, number1: int, number2: int):
     await interaction.response.send_message(f'random luku väliltä {number1}-{number2} on {randint(number1, number2)}')
-
-@client.tree.command(name='roast', description='Roastaan sinut!', guild=GUILD_ID)
-async def vitsi(interaction: discord.Interaction):
-    with open("mustan_huumorin_loukkaukset.txt", "r") as f:
-        roast = f.readlines()
-        r1 = roast[randint(0,len(roast)-1]
-        await interaction.response.send_message(r1)
         
 
 @client.tree.command(name="valitse", description="Valitsee satunnaisesti annetusta listasta! Erota vaihtoehdot pilkulla  --> , ", guild=GUILD_ID)
@@ -531,7 +524,12 @@ async def quote(interaction: discord.Interaction):
     today_quote = get_daily_quote()
     await interaction.response.send_message(f"📢 Quote of the Day:\n{today_quote}")
 
-
+@client.tree.command(name='roast', description='Roastaan sinut!', guild=GUILD_ID)
+async def vitsi(interaction: discord.Interaction):
+    with open("mustan_huumorin_loukkaukset.txt", "r") as f:
+        roast = f.readlines()
+        r1 = roast[randint(0,len(roast)-1)]
+        await interaction.response.send_message(r1)
     
 
 # Asynkroninen pääfunktio
