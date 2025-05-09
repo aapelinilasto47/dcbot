@@ -167,25 +167,24 @@ async def sigma(interaction: discord.Interaction):
     ukko = lista[randint(0,5)]
     await interaction.response.send_message(f'Sigma male on tällä hetkellä: <@{ukko}>')
 
-@client.tree.command(name='laskin', description='syötä lasku, niin suoritan sen! Laskun pitää olla muotoa (luku1) (välimerkki) (luku2)', guild=GUILD_ID)
+@client.tree.command(name='laskin', description='syötä lasku, niin suoritan sen! Muista erottaa välilyönnillä numerot ja välimerkki', guild=GUILD_ID)
 async def laskin(interaction: discord.Interaction, syöte: str):
-    try:
-        st = syöte.split()
-        luku1 = int(st[0])
-        luku2 = int(st[2])
-        if st[1] == "+":
-            viesti = f"{luku1} + {luku2} = {luku1 + luku2}"
-        elif st[1] == "-":
-            viesti = f"{luku1} - {luku2} = {luku1 - luku2}"
-        elif st[1] == "*":
-            viesti = f"{luku1} * {luku2} = {luku1 * luku2}"
-        elif st[1] == "/":
-            viesti = f"{luku1} / {luku2} = {luku1 / luku2}"
-        else:
-            await interaction.response.send_message("Virheellinen syöte, yritä uudelleen!")
-        await interaction.response.send_message(viesti)
-    except IndexError:
-        print("Virhe: muotoile syöte oikein (esim. 1 + 3)")
+
+    st = syöte.split()
+    luku1 = int(st[0])
+    luku2 = int(st[2])
+    if st[1] == "+":
+        viesti = f"{luku1} + {luku2} = {luku1 + luku2}"
+    elif st[1] == "-":
+        viesti = f"{luku1} - {luku2} = {luku1 - luku2}"
+    elif st[1] == "*":
+        viesti = f"{luku1} * {luku2} = {luku1 * luku2}"
+    elif st[1] == "/":
+        viesti = f"{luku1} / {luku2} = {luku1 / luku2}"
+    else:
+        await interaction.response.send_message("Virheellinen syöte, yritä uudelleen!")
+    await interaction.response.send_message(viesti)
+
         
     
     
