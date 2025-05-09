@@ -102,8 +102,8 @@ class Client(commands.Bot):
         if message.content == 'homo':
             await message.channel.send(f'En oo homo ku oli sukat jalas')
 
-        if message.author == 1366534715485589514:
-            await message.add_reaction('🤭')
+        if message.author.id == 1366534715485589514:
+            await message.reply('😐bro got the whole squad laughing')
 
 
         if 'neeker' in message.content:
