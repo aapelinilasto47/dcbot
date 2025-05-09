@@ -526,7 +526,7 @@ async def quote(interaction: discord.Interaction):
 
 @client.tree.command(name='roast', description='Roastaan sinut!', guild=GUILD_ID)
 async def vitsi(interaction: discord.Interaction):
-    with open("mustan_huumorin_loukkaukset.txt", "r") as f:
+    with open("roastit.txt", "r") as f:
         roast = f.readlines()
         r1 = roast[randint(0,len(roast)-1)]
         await interaction.response.send_message(r1)
