@@ -524,13 +524,16 @@ async def quote(interaction: discord.Interaction):
     today_quote = get_daily_quote()
     await interaction.response.send_message(f"📢 Quote of the Day:\n{today_quote}")
 
-@client.tree.command(name='roast', description='Roastaan sinut!', guild=GUILD_ID)
-async def vitsi(interaction: discord.Interaction):
+@client.tree.command(name='roast', description='Roastaan mainitsemasi henkilön!', guild=GUILD_ID)
+async def vitsi(interaction: discord.Interaction, kuka: str):
     with open("roastit.txt", "r") as f:
         roast = f.readlines()
         r1 = roast[randint(0,len(roast)-1)]
-        await interaction.response.send_message(r1)
-    
+        await interaction.response.send_message(f"Hei {kuka}! {r1})
+
+@client.tree.command(name="sori", description="Antaa anteeksi! Kirjoita ensin keneltä pyydetään anteeksi ja sen jälkeen ketkä pyytävät anteeksi!", guild=GUILD_ID)
+async def sori(interaction: discord.Interaction, keneltä: str):
+    await interaction.response.send_message(f"Anteeksi {keneltä}😔 {interaction.user.mention} pyytää sinulta anteeksi!")   
 
 # Asynkroninen pääfunktio
 async def main():
