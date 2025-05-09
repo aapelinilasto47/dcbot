@@ -112,6 +112,10 @@ class Client(commands.Bot):
         if 'nigg' in message.content:
             await message.channel.send(f'{message.author} <--- tämä henkilö on rasisti')
 
+        if 'fortnite' in message.content:
+            viesti = "YO, WAKE UP 😳, CHECK ITEM SHOP 💸, ja siellä on NEW SKIN: BATTLE PASS GIGA CHAD 🤩, NO WAY I JUST COPPED THIS 💀. MOM’S YELLING AT ME, BUT I’M TOO BUSY FLOSSIN 💃 TO KUUNTELE. BATTLE BUS TURNS INTO A LITERAL DRIFTING LAMBORGHINI 🏎️, AND WE DROPPING IN OHIO ZONE 🏝️!I LAND IN TILTED TOILETS 🚽, KOKO MAAILMA ON NYT ONE BIG SKIBIDI DANCE PARTY 💃🕺. Koko lobby on spammaamassa DEFAULT DANCE 😭🔥, ja mä vastaan CRANKKAAMALLA 90S ⬆️😤. NEW UPDATE JUST DROPPED: 24/7 FORTNITE MEME LOBBY 📲! EVERYONE IS FLYING AROUND IN SKELETON TANKS 💀🚀, WATCH OUT FOR THE FLYING TOILET 🫣💨, ja no one knows what's real anymore. WHERE WE DROPPING? OHIO AGAIN 😎🔥 BATTLE PASS UPDATES: NOW YOU CAN BE A SKIBIDI TOILET 🚽💀, and there’s a new emote, THE GRIDDY FLUSH 😩. I’M GETTING SHOT BY RIZZER 3000, BUT I’M STILL WINNING THESE MATCHES LIKE SIGMA CHAD 💪.I HIT THE T-POSE WHILE DRAKE DROPS A FORTNITE ALBUM 🎶, and EVERYONE IN THE LOBBY IS PLAYING SUS REMIX 🥶. I GET ELIMMED BY A CYBERTRUCK WITH A RAZOR SHARK 🦈💥, BUT WHO CARES?! I HIT THE L + RATIO + GRIDDY + EMOTE 🕺💯, BRO THIS IS LIFE. BATTLE PASS IS ALL 💸, AND I CANT STOP PLAYING THIS GAME. FORNITE? MORE LIKE A BRAINROT SIMULATOR 🤯💀."
+            await message.channel.send(viesti)
+
         await self.process_commands(message)
 
 
