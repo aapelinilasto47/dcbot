@@ -167,21 +167,25 @@ async def sigma(interaction: discord.Interaction):
     ukko = lista[randint(0,5)]
     await interaction.response.send_message(f'Sigma male on tällä hetkellä: <@{ukko}>')
 
-@client.tree.command(name='summa', description='lasken summan antamillesi luvuille', guild=GUILD_ID)
-async def summa(interaction: discord.Interaction, number1: int, number2: int):
-    await interaction.response.send_message(f'{number1} + {number2} = {number1 + number2}')
+@client.tree.command(name='laskin', description='syötä lasku, niin suoritan sen! Laskun pitää olla muotoa (luku1) (välimerkki) (luku2)', guild=GUILD_ID)
+async def laskin(interaction: discord.Interaction, syöte: str):
+    st = syöte.split()
+    luku1 = st[0]
+    luku2 = st[2]
+    if st[1] = "+":
+        viesti = f"{luku1} + {luku2} = {luku1 + luku2}"
+    elif st[1] = "-":
+        viesti = f"{luku1} - {luku2} = {luku1 - luku2}"
+    elif st[1] = "*":
+        viesti = f"{luku1} * {luku2} = {luku1 * luku2}"
+    elif st[1] = "/":
+        viesti = f"{luku1} / {luku2} = {luku1 / luku2}"
+    else:
+        await interaction.response.send_message("Virheellinen syöte, yritä uudelleen!")
+    await interaction.response.send_message(viesti)
+    
+    
 
-@client.tree.command(name='erotus', description='lasken erotuksen antamillesi luvuille', guild=GUILD_ID)
-async def miinus(interaction: discord.Interaction, number1: int, number2: int):
-    await interaction.response.send_message(f'{number1} - {number2} = {number1 - number2}')
-
-@client.tree.command(name='kerto', description='lasken tulon antamillesi luvuille', guild=GUILD_ID)
-async def kerto(interaction: discord.Interaction, number1: int, number2: int):
-    await interaction.response.send_message(f'{number1} * {number2} = {number1 * number2}')
-
-@client.tree.command(name='jako', description='lasken jakolaskun antamillasi luvuilla', guild=GUILD_ID)
-async def jako(interaction: discord.Interaction, number1: int, number2: int):
-    await interaction.response.send_message(f'{number1} / {number2} = {number1 / number2}')
 
 @client.tree.command(name='random', description='random luku antamallasi välillä', guild=GUILD_ID)
 async def randomi(interaction: discord.Interaction, number1: int, number2: int):
