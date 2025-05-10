@@ -116,6 +116,10 @@ class Client(commands.Bot):
             viesti = "☝️😃Number One#️⃣1️⃣Victory Royale🏆🥇Yeah, Fortnite🏕️we bout to👇get down (get down)⬇️Ten🔟kills☠️on🔛the board🎯right now⏱️Just wiped out💥Tomato🍅Town🏡My friend👯‍♂️just got🙇🏻‍♂️downed😱I revived💉him😇now we’re heading🏃🏃‍♂️south🧭bound⬇️Now we’re in👉the Pleasent😊Park🏞️streets🏘️Look👀at the map🗺️go to the mark✅sheet📝Take me🤝to your Xbox🎮📺to play🕹️Fortnite🏕️today📅You can take🤝me🏃‍♂️to Moist💦Mire🐊but not🙅🏻‍♂️Loot💰Lake🌊🤢I'd really love❤️🥰to chug jug🍻with you😳👉👈We can be pro😎Fortnite🏕️gamers👾🎮🕹️"
             await message.channel.send(viesti)
 
+        if 'samppa' in message.content.lower():
+            viesti1 = f"If {samppa} has a million fans, then I am one of them. If {samppa} has ten fans, then I am one of them. If {samppa} has only one fan then that is me. If {samppa} has no fans, then that means I am no longer on earth. If the world is against {samppa}, then I am against the world."
+            await message.channel.send(viesti1)
+        
         await self.process_commands(message)
 
 
