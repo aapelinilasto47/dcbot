@@ -127,6 +127,30 @@ class Client(commands.Bot):
         if 'treffi' in message.content.lower():
             v3 = f"Not gonna be active on Discord tonight. I'm meeting a girl (a real one) in half an hour (wouldn't expect a lot of you to understand anyway) so please don't DM me asking me where I am (im with the girl, ok) you'll most likely get aired because i'll be with the girl (again I don't expect you to understand) shes actually really interested in me and its not a situation i can pass up for some meaningless Discord degenerates (because i'll be meeting a girl, not that you really are going to understand) this is my life now. Meeting women and not wasting my precious time online, I have to move on from such simple things and branch out (you wouldnt understand)"
             await message.channel.send(v3)
+
+        if 'tyttö' or 'nainen' in message.content.lower():
+            v4 = f"No way 🤯 girl on discord? 🧐 Howdy I didn't expect to see no girl round dees parts 🤠 allow me to introduce myself to you mlady 😤 you can call me Jamal and I'll call you my kitten 🤓 I moderate multiple discord servers y'know I'm a man of high status 😁 I've been looking for some female companionship lately 🤗 and since my mother has thrown me out of the basement I'm not an independent person 😎 some may even refer to me as a big boy ☺️ I live in a homeless shelter tho 🤧 and I have no job 😄 I have hobbies such as reddit and discord and anime so I'm quirky like that 😵‍💫I live of disability benefits which I spend on funko pops and anime figurines 🤑 the homeless shelter however does not allow me more than 5 hours of reddit time so it's literally 1984 😓 but please give me a chance mlady cuz I just need you to cook me food and let me live in your house and give me money and change my diapers and pay for my Nitro 🤩 Other than that I am a nice guy 😍"
+            await message.channel.send(v4)
+
+        if 'kitten' in message.content.lower():
+            v5 = f"As the 💿💀 Supreme Discord Mod 💀💿 of this server (yes, THE 🧃FluffKing#0001🧃), I must formally declare my 💍eternal devotion💍 to my Discord Kitten 💕💞✨PrincessNekoUwU420✨💞💕.
+
+While you were out there 😒 interacting with humans 🤢 and experiencing the sun ☀️ cringe, I was in VC with her, sharing a Pepe-shaped pizza 🍕🐸 and whispering sweet nothings like:
+nyaa~ notice me senpai teehee 💗💗 😳👉👈💫
+
+She calls me her pwecious moddy woddyy 😚💋 and I give her Nitro, 37 custom roles, and exclusive access to the kitten-only cuddle channel 🛏️🐾 (no you cant join 😡 unless you have the Kitten Pass™).
+
+Every night, I tuck her into bed with a dramatic reading of the Discord TOS 📜🛌, then stay awake till 4AM writing custom bot scripts that reply nya~ 💖 every time she types meow 😩🐱.
+
+You have a girlfriend That’s cute I have a Level 99 Goth CyberNeko EmoKitten GF who types in sparkles and once called me her pogchamp moddy bear 💘💘💘 I transcended reality in that moment 🧘‍♂️🌌.
+
+So back off. This is more than love. This is digital destiny 🤖💞.
+
+💀💖🧃Signed,
+Mod Supreme FluffKing#0001
+aka The Simp Reaper 🌹🔨"
+            await message.channel.send(v5)
+            
         await self.process_commands(message)
 
 
