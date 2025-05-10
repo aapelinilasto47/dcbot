@@ -133,7 +133,7 @@ class Client(commands.Bot):
             await message.channel.send(v4)
 
         if 'kitten' in message.content.lower():
-            v5 = f"As the 💿💀 Supreme Discord Mod 💀💿 of this server (yes, THE 🧃FluffKing#0001🧃), I must formally declare my 💍eternal devotion💍 to my Discord Kitten 💕💞✨PrincessNekoUwU420✨💞💕.
+            v5 = f"As the 💿💀 Supreme Discord Mod 💀💿 of this server (yes, THE 🧃FluffKing🧃), I must formally declare my 💍eternal devotion💍 to my Discord Kitten 💕💞✨PrincessNekoUwU420✨💞💕.
 
 While you were out there 😒 interacting with humans 🤢 and experiencing the sun ☀️ cringe, I was in VC with her, sharing a Pepe-shaped pizza 🍕🐸 and whispering sweet nothings like:
 nyaa~ notice me senpai teehee 💗💗 😳👉👈💫
@@ -147,7 +147,7 @@ You have a girlfriend That’s cute I have a Level 99 Goth CyberNeko EmoKitten G
 So back off. This is more than love. This is digital destiny 🤖💞.
 
 💀💖🧃Signed,
-Mod Supreme FluffKing#0001
+Mod Supreme FluffKing
 aka The Simp Reaper 🌹🔨"
             await message.channel.send(v5)
             
