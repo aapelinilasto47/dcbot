@@ -133,22 +133,41 @@ class Client(commands.Bot):
             await message.channel.send(v4)
 
         if 'kitten' in message.content.lower():
-            v5 = f"As the 💿💀 Supreme Discord Mod 💀💿 of this server (yes, THE 🧃FluffKing🧃), I must formally declare my 💍eternal devotion💍 to my Discord Kitten 💕💞✨PrincessNekoUwU420✨💞💕.
+            v5 = f"❤️ Rules for discord Kitten: ❤️
 
-While you were out there 😒 interacting with humans 🤢 and experiencing the sun ☀️ cringe, I was in VC with her, sharing a Pepe-shaped pizza 🍕🐸 and whispering sweet nothings like:
-nyaa~ notice me senpai teehee 💗💗 😳👉👈💫
+1. Bedtime on school nights is 11:00 pm.
 
-She calls me her pwecious moddy woddyy 😚💋 and I give her Nitro, 37 custom roles, and exclusive access to the kitten-only cuddle channel 🛏️🐾 (no you cant join 😡 unless you have the Kitten Pass™).
+2. Bedtime on weekends is 2 am.
 
-Every night, I tuck her into bed with a dramatic reading of the Discord TOS 📜🛌, then stay awake till 4AM writing custom bot scripts that reply nya~ 💖 every time she types meow 😩🐱.
+3. Eat at least TWO meals a day.
 
-You have a girlfriend That’s cute I have a Level 99 Goth CyberNeko EmoKitten GF who types in sparkles and once called me her pogchamp moddy bear 💘💘💘 I transcended reality in that moment 🧘‍♂️🌌.
+4. Eat one healthy snack each day.
 
-So back off. This is more than love. This is digital destiny 🤖💞.
+5. No self-harm.
 
-💀💖🧃Signed,
-Mod Supreme FluffKing
-aka The Simp Reaper 🌹🔨"
+Come talk to Daddy if you need support!
+
+6. No lying to Daddy.
+
+7. Respect Daddy
+
+8. ALWAYS ask for permission before taking pills.
+
+9. You must compliment yourself at least once per day.
+
+10. Do not let other boys (or girls) lust after you — You BELONG to Daddy!!!
+
+11. No drinking without permission.
+
+12. No drugs.
+
+13. No eating after 8 pm.
+
+14. You may not please yourself out side of playtime with daddy. <<
+
+Daddy may make exceptions to the aforementioned rules, Kitten may not.
+
+Disobeying Daddy’s rules will result in punishment."
             await message.channel.send(v5)
             
         await self.process_commands(message)
