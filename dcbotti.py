@@ -133,41 +133,7 @@ class Client(commands.Bot):
             await message.channel.send(v4)
 
         if 'kitten' in message.content.lower():
-            v5 = f"❤️ Rules for discord Kitten: ❤️
-
-1. Bedtime on school nights is 11:00 pm.
-
-2. Bedtime on weekends is 2 am.
-
-3. Eat at least TWO meals a day.
-
-4. Eat one healthy snack each day.
-
-5. No self-harm.
-
-Come talk to Daddy if you need support!
-
-6. No lying to Daddy.
-
-7. Respect Daddy
-
-8. ALWAYS ask for permission before taking pills.
-
-9. You must compliment yourself at least once per day.
-
-10. Do not let other boys (or girls) lust after you — You BELONG to Daddy!!!
-
-11. No drinking without permission.
-
-12. No drugs.
-
-13. No eating after 8 pm.
-
-14. You may not please yourself out side of playtime with daddy. <<
-
-Daddy may make exceptions to the aforementioned rules, Kitten may not.
-
-Disobeying Daddy’s rules will result in punishment."
+            v5 = f"❤️ Rules for discord Kitten: ❤️ 1. Bedtime on school nights is 11:00 pm. 2. Bedtime on weekends is 2 am. 3. Eat at least TWO meals a day. 4. Eat one healthy snack each day. 5. No self-harm. Come talk to Daddy if you need support! 6. No lying to Daddy. 7. Respect Daddy 8. ALWAYS ask for permission before taking pills. 9. You must compliment yourself at least once per day. 10. Do not let other boys (or girls) lust after you — You BELONG to Daddy!!! 11. No drinking without permission. 12. No drugs. 13. No eating after 8 pm. 14. You may not please yourself out side of playtime with daddy. Daddy may make exceptions to the aforementioned rules, Kitten may not. Disobeying Daddys rules will result in punishment."
             await message.channel.send(v5)
             
         await self.process_commands(message)
