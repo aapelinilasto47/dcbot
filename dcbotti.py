@@ -123,7 +123,10 @@ class Client(commands.Bot):
         if 'paavi' in message.content.lower():
             v2 = f"🪦 RIP 💀 to FREAKY 🫦 POPE ✝️ FRANCIS 👴 who partied 💃 too hard 🍆 👀 this 4️⃣ /2️⃣ 0️⃣ 🌬️ 🌿 and got too LIT 🚬 on EASTER 🐰 and has sadly pASSed 🍑 on 🪦 from this life 🌎 at 8️⃣ 8️⃣ years old 👴 Now ‼️ he can sanctify ✝️ some SLUTS 👧 up ⬆️ in heaven 👼 with his 👀 side 👀 piece ❤️ JESUS 🙇‍♂️ CHRIST ✝️ He 🧑 will be fondlingly 🥵 remembered 🤔 as the FREAKIEST 😈 pope 😫 who NEVER 🚫 touched 👐 little boys 🧒 AND ‼️ made sure 💡 to show 🔍 LOVE ❤️ to everyone 🏳️‍🌈 around 🍑 the world 🌎 So get 👐 your bread 🍞 and eat 🤤 the BUSSY 🍑 of Christ ✝️ and drink 🤤 some cummy 💦 wine 🍷 for CUMMUNION 💦 💦 to ensure 🙏 your pASSage 🍑 to heaven 👼 with good 🤗 ole' FRANCIS 👴 Send 💌 this to ➡️ your 🔟 most ✝️ CHRISTLY 👼 CUNTS 👭 and if you 🫵 get 0️⃣ back 🍑 you're 🫵 a 👹 HEAVENLESS 👿 WHORE 🍆 👅 if you 🫵 get 5️⃣ back ⬅️ you're 🫵 a NAUGHTY 🥵 LITTLE 🤏 ALTER 🕺 BOY 😳 and if you 🫵 get 🔟 back you're 😜 a REAL 🔥 SPIRITUAL ✝️ SLUT 💦"
             await message.channel.send(v2)
-            
+
+        if 'treffi' in message.content.lower():
+            v3 = f"Not gonna be active on Discord tonight. I'm meeting a girl (a real one) in half an hour (wouldn't expect a lot of you to understand anyway) so please don't DM me asking me where I am (im with the girl, ok) you'll most likely get aired because i'll be with the girl (again I don't expect you to understand) shes actually really interested in me and its not a situation i can pass up for some meaningless Discord degenerates (because i'll be meeting a girl, not that you really are going to understand) this is my life now. Meeting women and not wasting my precious time online, I have to move on from such simple things and branch out (you wouldnt understand)"
+            await message.channel.send(v3)
         await self.process_commands(message)
 
 
