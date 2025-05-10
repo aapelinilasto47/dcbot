@@ -119,7 +119,11 @@ class Client(commands.Bot):
         if 'samppa' in message.content.lower():
             viesti1 = f"If <@{samppa}> has a million fans, then I am one of them. If <@{samppa}> has ten fans, then I am one of them. If <@{samppa}> has only one fan then that is me. If <@{samppa}> has no fans, then that means I am no longer on earth. If the world is against <@{samppa}>, then I am against the world."
             await message.channel.send(viesti1)
-        
+
+        if 'paavi' in message.content.lower():
+            v2 = f"🪦 RIP 💀 to FREAKY 🫦 POPE ✝️ FRANCIS 👴 who partied 💃 too hard 🍆 👀 this 4️⃣ /2️⃣ 0️⃣ 🌬️ 🌿 and got too LIT 🚬 on EASTER 🐰 and has sadly pASSed 🍑 on 🪦 from this life 🌎 at 8️⃣ 8️⃣ years old 👴 Now ‼️ he can sanctify ✝️ some SLUTS 👧 up ⬆️ in heaven 👼 with his 👀 side 👀 piece ❤️ JESUS 🙇‍♂️ CHRIST ✝️ He 🧑 will be fondlingly 🥵 remembered 🤔 as the FREAKIEST 😈 pope 😫 who NEVER 🚫 touched 👐 little boys 🧒 AND ‼️ made sure 💡 to show 🔍 LOVE ❤️ to everyone 🏳️‍🌈 around 🍑 the world 🌎 So get 👐 your bread 🍞 and eat 🤤 the BUSSY 🍑 of Christ ✝️ and drink 🤤 some cummy 💦 wine 🍷 for CUMMUNION 💦 💦 to ensure 🙏 your pASSage 🍑 to heaven 👼 with good 🤗 ole' FRANCIS 👴 Send 💌 this to ➡️ your 🔟 most ✝️ CHRISTLY 👼 CUNTS 👭 and if you 🫵 get 0️⃣ back 🍑 you're 🫵 a 👹 HEAVENLESS 👿 WHORE 🍆 👅 if you 🫵 get 5️⃣ back ⬅️ you're 🫵 a NAUGHTY 🥵 LITTLE 🤏 ALTER 🕺 BOY 😳 and if you 🫵 get 🔟 back you're 😜 a REAL 🔥 SPIRITUAL ✝️ SLUT 💦"
+            await message.channel.send(v2)
+            
         await self.process_commands(message)
 
 
