@@ -117,7 +117,7 @@ class Client(commands.Bot):
             await message.channel.send(viesti)
 
         if 'samppa' in message.content.lower():
-            viesti1 = f"If {samppa} has a million fans, then I am one of them. If <@{samppa}> has ten fans, then I am one of them. If <@{samppa}> has only one fan then that is me. If <@{samppa}> has no fans, then that means I am no longer on earth. If the world is against <@{samppa}>, then I am against the world."
+            viesti1 = f"If <@{samppa}> has a million fans, then I am one of them. If <@{samppa}> has ten fans, then I am one of them. If <@{samppa}> has only one fan then that is me. If <@{samppa}> has no fans, then that means I am no longer on earth. If the world is against <@{samppa}>, then I am against the world."
             await message.channel.send(viesti1)
         
         await self.process_commands(message)
