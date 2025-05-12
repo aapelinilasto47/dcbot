@@ -105,6 +105,9 @@ class Client(commands.Bot):
         if message.author.id == 1366534715485589514:
             await message.reply('😐bro got the whole squad laughing')
 
+        if message.author.id == 277091775812861952:
+            await message.reply('nadal atm')
+
 
         if 'neeker' in message.content:
             await message.channel.send(f'{message.author} <--- tämä henkilö on rasisti')
