@@ -69,7 +69,7 @@ class Client(commands.Bot):
 
 
         try:
-            guild = discord.Object(id=1196849352874926080)
+            guild = discord.Object(id=548149996462145546)
             synced = await self.tree.sync(guild=guild)
             print(f'Synced {len(synced)} commands to guild {guild.id}')
 
@@ -179,7 +179,7 @@ intents.message_content = True
 client = Client(command_prefix='!', intents=intents)
 
 
-GUILD_ID = discord.Object(id=1196849352874926080)
+GUILD_ID = discord.Object(id=548149996462145546)
 
 def kryptaa_lause(lause):
     lause = lause.lower()
