@@ -623,7 +623,7 @@ async def krypto(interaction: discord.Interaction):
                     rsp1 = rsp.replace(" ", "")
                     await interaction.followup.send(f"Arvauksesi: {rsp1} \n Kryptattu lause: {k2}")
 
-                    if rsp1 == k2:
+                    if rsp1.strip() == k2.strip():
                         yritykset += 1
                         await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {k1}")
                         await interaction.followup.send(f"Yhteenveto: \n Oikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
@@ -658,7 +658,7 @@ async def krypto(interaction: discord.Interaction):
                         krypt1 = krypt1.replace(" ", "")
                         await interaction.followup.send(f"{krypt1} {k2}")
                         
-                        if  krypt1 == k2:
+                        if  krypt1.split() == k2.split():
                             await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {k1}")
                             await interaction.followup.send(f"Yhteenveto: \n Oikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
                             break
