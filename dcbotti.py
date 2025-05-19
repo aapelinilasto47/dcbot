@@ -606,23 +606,10 @@ async def krypto(interaction: discord.Interaction):
                 await interaction.followup.send(f"Vihjeitä käytetty: {vihjeet}")
                 
                 continue
-            elif response.startswith("lause "):
-                try:
-                    lause = str(response.content[6:])
-                    if lause.strip() == k1.strip():
-                        await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {k1}")
-                        yritykset += 1
-                        await interaction.followup.send(f"Yhteenveto: \n Oikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
-                        break
-                    else:
-                        await interaction.followup.send("Väärin! Yritä uudelleen!")
-                        väärät += 1
-                        await interaction.followup.send(f"Väärät vastaukset: {väärät}")
-                        continue
-
-                except ValueError:
-                    await interaction.followup.send("Virheellinen syöte! Kirjoita ensin lause ja sitten arvaus! esim. lause kivestä saa kivestä")
-                    continue
+            elif response.content.lower() == k1.strip():
+                await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {k1}")
+                await interaction.followup.send(f"Yhteenveto: \n Oikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
+                break
             elif response.content.lower() == "lopeta":
                 await interaction.followup.send("Peli lopetettu!")
                 await interaction.followup.send(f"Yhteenveto: \n Kryptattu lause: {k1}\n Oikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
