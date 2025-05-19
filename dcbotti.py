@@ -630,6 +630,13 @@ async def krypto(interaction: discord.Interaction):
                         väärät += 1
                         await interaction.followup.send(f"Väärät vastaukset: {väärät}")
                         continue
+                elif response.author.bot == True:
+                    continue
+                else:
+                    await interaction.followup.send("Et voi osallistua tähän peliin!")
+                    continue
+                
+        
             elif response.content.lower() == "lopeta":
                 await interaction.followup.send(f"Peli lopetettu! Kryptattu lause oli: {k1}")
                 await interaction.followup.send(f"Yhteenveto: \n Oikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
