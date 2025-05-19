@@ -567,7 +567,7 @@ async def randomadc(interaction: discord.Interaction):
 
 @client.tree.command(name="randomquote", description="Arvotaan sinulle viisas aforismi!", guild=GUILD_ID)
 async def randomquote(interaction: discord.Interaction):
-     await interaction.response.send_message(quotet[randint(0, len(vitsit)-1)])
+     await interaction.response.send_message(quotet[randint(0, len(quotet)-1)])
 
 @client.tree.command(name="quote", description="Näytä päivän sitaatti", guild=GUILD_ID)
 async def quote(interaction: discord.Interaction):
