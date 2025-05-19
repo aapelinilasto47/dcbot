@@ -641,11 +641,12 @@ async def krypto(interaction: discord.Interaction):
                     if avain[kirjain] == int(numero):
                         await interaction.followup.send(f"Oikein! ✅")
                         await interaction.followup.send(f"Kirjain: {kirjain} = {numero}")
-                        del lista[lista.index(kirjain)]
+                        
                         yritykset += 1
                         kryptattu = kryptattu.replace(str(numero), kirjain)
                         krypt1 = kryptattu.replace("  ", "")
                         krypt2 = krypt1.replace(" ", "")
+                        await interaction.followup.send(krypt2, k2)
                         
                         if  krypt2 == k2:
                             await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {k1}")
