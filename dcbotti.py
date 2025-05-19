@@ -593,6 +593,7 @@ async def krypto(interaction: discord.Interaction):
         väärät = 0
         yritykset = 0
         k2 = k1.replace(" ", "")
+        k2 = k2.lower()
 
 
     await interaction.response.send_message(f"Tervetuloa krypto-sanapeliin {interaction.user.mention}!\n Kryptattu lause on: {kryptattu} \n Arvaa kirjain kirjoittamalla ensin kirjain ja sitten numero! esim. a 1 \n Voit myös arvata koko lausetta kirjoittamalla ensin lause, jonka jälkeen voit syöttää arvauksesi.\n Jos haluat vihjeen, kirjoita vihje. Vihje paljastaa satunnaisen kirjaimen! \n Jos haluat lopettaa pelin, kirjoita lopeta!")
