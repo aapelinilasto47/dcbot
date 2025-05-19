@@ -584,7 +584,7 @@ async def vitsi(interaction: discord.Interaction, kuka: str):
 
 @client.tree.command(name='krypto', description='Ratkaise kryptattu lause!', guild=GUILD_ID)
 async def krypto(interaction: discord.Interaction):
-    with open("sanakrypto_lauseet.txt", "r") as f:
+    with open("Sanakrypto_lauseet.txt", "r") as f:
         kryptot = f.readlines()
         k1 = kryptot[randint(0,len(kryptot)-1)]
         kryptattu, avain = kryptaa_lause(k1)
@@ -604,10 +604,19 @@ async def krypto(interaction: discord.Interaction):
                     kirjain, numero = response.content.split()
                     numero = int(numero)
                     if avain[kirjain] == int(numero):
-                        await interaction.followup.send(f"Oikein! Kryptattu lause on: {kryptattu.replace(str(numero), kirjain)}")
-                        break
+                        await interaction.followup.send(f"Oikein! ✅")
+                        await interaction.followup.send(f"Kirjain: {kirjain} = {numero}")
+                        kryptattu = kryptattu.replace(str(numero), kirjain)
+                        if "-" not in kryptattu:
+                            await interaction.followup.send(f"Voitit!🎉 Kryptattu lause oli: {k1}")
+                            break
+                        else:
+                            await interaction.followup.send(f"Kryptattu lause on nyt: {kryptattu}")
+                            continue
+                        
                     else:
                         await interaction.followup.send("Väärin! Yritä uudelleen!")
+                        continue
                 except ValueError:
                     await interaction.followup.send("Virheellinen syöte! Kirjoita ensin kirjain ja sitten numero! esim. a 1")
         elif response.author.bot == True:
