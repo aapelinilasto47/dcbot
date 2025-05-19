@@ -590,36 +590,36 @@ async def krypto(interaction: discord.Interaction):
         kryptattu, avain = kryptaa_lause(k1)
 
 
-        await interaction.response.send_message(f"Hei {interaction.user.mention}! Kryptattu lause on: {k1} \n Arvaa kirjain kirjoittamalla ensin numero ja sitten kirjain! Esim. 1 a \n Jos haluat vihjeen, kirjoita vihje. Vihje paljastaa satunnaisen kirjaimen!")
+    await interaction.response.send_message(f"Hei {interaction.user.mention}! Kryptattu lause on: {k1} \n Arvaa kirjain kirjoittamalla ensin numero ja sitten kirjain! Esim. 1 a \n Jos haluat vihjeen, kirjoita vihje. Vihje paljastaa satunnaisen kirjaimen!")
 
-        while True:
-            response = await client.wait_for("message")
-            if response.author == interaction.user:
-                if response.content.lower() == "vihje":
-                    randomnro = randint(1, len(avain))
-                    for i in range(len(avain)):
-                        if avain[i] == randomnro:
-                            await interaction.followup.send(f"Vihje: {randomnro} = {kryptattu[i]}")
-                            break
-                else:
-                    try:
-                        numero, kirjain = response.content.split()
-                        numero = int(numero)
-                        if numero in avain.values():
-                            for i in range(len(avain)):
-                                if avain[i] == numero:
-                                    kryptattu = kryptattu[:i] + kirjain + kryptattu[i+1:]
-                                    await interaction.followup.send(f"Kryptattu lause: {kryptattu}")
-                                    break
-                    except ValueError:
-                        await interaction.followup.send("Virheellinen syöte! Kirjoita ensin numero ja sitten kirjain!")
+    while True:
+        response = await client.wait_for("message")
+        if response.author == interaction.user:
+            if response.content.lower() == "vihje":
+                randomnro = randint(1, len(avain))
+                for i in range(len(avain)):
+                    if avain[i] == randomnro:
+                        await interaction.followup.send(f"Vihje: {randomnro} = {kryptattu[i]}")
+                        break
             else:
-                await interaction.followup.send(f"Et voi osallistua {response.author.mention}! Tämä on käyttäjän {interaction.user.mention} peli!")
-                continue
+                try:
+                    numero, kirjain = response.content.split()
+                    numero = int(numero)
+                    if numero in avain.values():
+                        for i in range(len(avain)):
+                            if avain[i] == numero:
+                                kryptattu = kryptattu[:i] + kirjain + kryptattu[i+1:]
+                                await interaction.followup.send(f"Kryptattu lause: {kryptattu}")
+                                break
+                except ValueError:
+                    await interaction.followup.send("Virheellinen syöte! Kirjoita ensin numero ja sitten kirjain!")
+        else:
+            await interaction.followup.send(f"Et voi osallistua {response.author.mention}! Tämä on käyttäjän {interaction.user.mention} peli!")
+            continue
 
-            if "-" not in kryptattu:
-                await interaction.followup.send(f"Voitit!🎉 Kryptattu lause oli: {k1}")
-                break
+        if "-" not in kryptattu:
+            await interaction.followup.send(f"Voitit!🎉 Kryptattu lause oli: {k1}")
+            break
 
 
 
