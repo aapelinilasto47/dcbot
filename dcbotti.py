@@ -184,7 +184,7 @@ GUILD_ID = discord.Object(id=548149996462145546)
 def kryptaa_lause(lause):
     lause = lause.lower()
     kirjaimet = sorted(set([c for c in lause if c.isalpha()]))
-    arvotut_numerot = random.sample(range(1, 100), len(kirjaimet))  # numerot 1–99
+    arvotut_numerot = random.sample(range(10, 100), len(kirjaimet))  # numerot 1–99
     kirjain_numero = dict(zip(kirjaimet, arvotut_numerot))
 
     kryptattu = []
