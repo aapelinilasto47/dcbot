@@ -584,7 +584,7 @@ async def vitsi(interaction: discord.Interaction, kuka: str):
 
 @client.tree.command(name='krypto', description='Ratkaise kryptattu lause!', guild=GUILD_ID)
 async def krypto(interaction: discord.Interaction, lause: str):
-    with open("kryptaus.txt", "r") as f:
+    with open("sanakrypto_lauseet.txt", "r") as f:
         kryptot = f.readlines()
         k1 = kryptot[randint(0,len(kryptot)-1)]
         kryptattu, avain = kryptaa_lause(k1)
