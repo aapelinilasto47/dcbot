@@ -620,6 +620,8 @@ async def krypto(interaction: discord.Interaction):
                     response = response.content.lower()
                     rsp = str(response)
                     rsp1 = rsp.replace(" ", "")
+                    await interaction.followup.send(f"Arvauksesi: {rsp1} \n Kryptattu lause: {k2}")
+
                     if rsp1 == k2:
                         yritykset += 1
                         await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {k1}")
