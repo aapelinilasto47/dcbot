@@ -609,9 +609,9 @@ async def krypto(interaction: discord.Interaction):
             elif response.startswith("lause"):
                 lause = response.split(" ", 1)[1]
                 if lause.strip() == k1.strip():
-                    await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {kryptattu}")
+                    await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {k1}")
                     yritykset += 1
-                    await interaction.followup.send(f"Yhteenveto: \n Kryptattu lause: {kryptattu}\nOikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
+                    await interaction.followup.send(f"Yhteenveto: \nOikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
                     break
                 else:
                     await interaction.followup.send("Väärin! Yritä uudelleen!")
@@ -620,7 +620,7 @@ async def krypto(interaction: discord.Interaction):
                     continue
             elif response.content.lower() == "lopeta":
                 await interaction.followup.send("Peli lopetettu!")
-                await interaction.followup.send(f"Yhteenveto: \n Kryptattu lause: {kryptattu}\nOikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
+                await interaction.followup.send(f"Yhteenveto: \n Kryptattu lause: {k1}\nOikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
                 break
             else:
                 try:
@@ -632,7 +632,7 @@ async def krypto(interaction: discord.Interaction):
                         yritykset += 1
                         kryptattu = kryptattu.replace(str(numero), kirjain)
                         if kryptattu.strip() == k1.strip():
-                            await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {kryptattu}")
+                            await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {1}")
                             await interaction.followup.send(f"Yhteenveto: \n Oikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
                             break
                         else:
