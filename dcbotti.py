@@ -601,10 +601,15 @@ async def krypto(interaction: discord.Interaction):
         response = await client.wait_for("message")
         if response.author == interaction.user:
             if response.content.lower() == "vihje":
-                vihje = random.choice(list(avain.keys()))
-                await interaction.followup.send(f"Vihje: {vihje} = {avain[vihje]}")
-                vihjeet += 1
-                await interaction.followup.send(f"Vihjeitä käytetty: {vihjeet}")
+                lista = list(avain.keys())
+                vihje = random.choice(lista)
+                if len(lista) == 0:
+                    await interaction.followup.send("Ei enää vihjeitä!")
+                    continue
+                else:
+                    await interaction.followup.send(f"Vihje: {vihje} = {avain[vihje]}")
+                    vihjeet += 1
+                    await interaction.followup.send(f"Vihjeitä käytetty: {vihjeet}")
                 
                 continue
             elif response.content.lower() == "lause":
@@ -634,6 +639,7 @@ async def krypto(interaction: discord.Interaction):
                     if avain[kirjain] == int(numero):
                         await interaction.followup.send(f"Oikein! ✅")
                         await interaction.followup.send(f"Kirjain: {kirjain} = {numero}")
+                        del lista[lista.index(kirjain)]
                         yritykset += 1
                         kryptattu = kryptattu.replace(str(numero), kirjain)
                         if kryptattu.replace(" ","") == k2:
