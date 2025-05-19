@@ -9,6 +9,7 @@ from datetime import datetime, timedelta
 import json
 import asyncio
 import requests
+import re
 
 
 import threading
@@ -644,11 +645,10 @@ async def krypto(interaction: discord.Interaction):
                         
                         yritykset += 1
                         kryptattu = kryptattu.replace(str(numero), kirjain)
-                        krypt1 = kryptattu.replace("  ", "")
-                        krypt2 = krypt1.replace(" ", "")
-                        await interaction.followup.send(krypt2, k2)
+                        krypt1 = re.sub(r'\s+', ' ', kryptattu)
+                        await interaction.followup.send(krypt1, k2)
                         
-                        if  krypt2 == k2:
+                        if  krypt1 == k2:
                             await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {k1}")
                             await interaction.followup.send(f"Yhteenveto: \n Oikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
                             break
