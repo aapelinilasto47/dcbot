@@ -606,7 +606,7 @@ async def krypto(interaction: discord.Interaction):
                 await interaction.followup.send(f"Vihjeitä käytetty: {vihjeet}")
                 
                 continue
-            elif response.startswith("lause"):
+            elif response.startswith("lause "):
                 try:
                     lause = str(response.content[6:])
                     if lause.strip() == k1.strip():
@@ -637,7 +637,7 @@ async def krypto(interaction: discord.Interaction):
                         yritykset += 1
                         kryptattu = kryptattu.replace(str(numero), kirjain)
                         if kryptattu.strip() == k1.strip():
-                            await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {1}")
+                            await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {k1}")
                             await interaction.followup.send(f"Yhteenveto: \n Oikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
                             break
                         else:
