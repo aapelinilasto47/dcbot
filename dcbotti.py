@@ -611,6 +611,7 @@ async def krypto(interaction: discord.Interaction):
                 response = await client.wait_for("message")
                 if response.author == interaction.user:
                     if response.content.lower() == k1.strip():
+                        yritykset += 1
                         await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {k1}")
                         await interaction.followup.send(f"Yhteenveto: \n Oikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
                         break
@@ -647,6 +648,8 @@ async def krypto(interaction: discord.Interaction):
                         continue
                 except ValueError:
                     await interaction.followup.send("Virheellinen syöte! Kirjoita ensin kirjain ja sitten numero! esim. a 1")
+                    
+                    
         elif response.author.bot == True:
             continue
         else:
