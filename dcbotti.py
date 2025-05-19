@@ -593,7 +593,7 @@ async def krypto(interaction: discord.Interaction):
         yritykset = 0
 
 
-    await interaction.response.send_message(f"Tervetuloa krypto-sanapeliin {interaction.user.mention}!\n Kryptattu lause on: {kryptattu} \n Arvaa kirjain kirjoittamalla ensin kirjain ja sitten numero! esim. a 1 \n Jos haluat vihjeen, kirjoita vihje. Vihje paljastaa satunnaisen kirjaimen! \n Jos haluat lopettaa pelin, kirjoita lopeta!")
+    await interaction.response.send_message(f"Tervetuloa krypto-sanapeliin {interaction.user.mention}!\n Kryptattu lause on: {kryptattu} \n Arvaa kirjain kirjoittamalla ensin kirjain ja sitten numero! esim. a 1 \n Voit myös arvata koko lausetta kirjoittamalla ensin lause ja perään arvaus! esim. lause kivestä saa kivestä Jos haluat vihjeen, kirjoita vihje. Vihje paljastaa satunnaisen kirjaimen! \n Jos haluat lopettaa pelin, kirjoita lopeta!")
 
     
     while True:
@@ -606,9 +606,21 @@ async def krypto(interaction: discord.Interaction):
                 await interaction.followup.send(f"Vihjeitä käytetty: {vihjeet}")
                 
                 continue
+            elif response.startswith("lause"):
+                lause = response.split(" ", 1)[1]
+                if lause.strip() == k1.strip():
+                    await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {kryptattu}")
+                    yritykset += 1
+                    await interaction.followup.send(f"Yhteenveto: \n Kryptattu lause: {kryptattu}\nOikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
+                    break
+                else:
+                    await interaction.followup.send("Väärin! Yritä uudelleen!")
+                    väärät += 1
+                    await interaction.followup.send(f"Väärät vastaukset: {väärät}")
+                    continue
             elif response.content.lower() == "lopeta":
                 await interaction.followup.send("Peli lopetettu!")
-                await interaction.followup.send(f"Yhteenveto: \n Kryptattu lause: {kryptattu}\nArvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
+                await interaction.followup.send(f"Yhteenveto: \n Kryptattu lause: {kryptattu}\nOikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
                 break
             else:
                 try:
