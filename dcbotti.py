@@ -607,8 +607,8 @@ async def krypto(interaction: discord.Interaction):
                         await interaction.followup.send(f"Oikein! ✅")
                         await interaction.followup.send(f"Kirjain: {kirjain} = {numero}")
                         kryptattu = kryptattu.replace(str(numero), kirjain)
-                        if "-" not in kryptattu:
-                            await interaction.followup.send(f"Voitit!🎉 Kryptattu lause oli: {k1}")
+                        if kryptattu == k1:
+                            await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {kryptattu}")
                             break
                         else:
                             await interaction.followup.send(f"Kryptattu lause on nyt: {kryptattu}")
