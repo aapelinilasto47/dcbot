@@ -592,6 +592,7 @@ async def krypto(interaction: discord.Interaction):
 
     await interaction.response.send_message(f"Tervetuloa krypto-sanapeliin {interaction.user.mention}!\n Kryptattu lause on: {kryptattu} \n Arvaa kirjain kirjoittamalla ensin kirjain ja sitten numero! esim. a 1 \n Jos haluat vihjeen, kirjoita vihje. Vihje paljastaa satunnaisen kirjaimen!")
 
+    await interaction.followup.send(avain)
     while True:
         response = await client.wait_for("message")
         if response.author == interaction.user:
