@@ -619,9 +619,9 @@ async def krypto(interaction: discord.Interaction):
                         await interaction.followup.send(f"Kirjain: {kirjain} = {numero}")
                         yritykset += 1
                         kryptattu = kryptattu.replace(str(numero), kirjain)
-                        if kryptattu == k1:
+                        if kryptattu.strip() == k1.strip():
                             await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {kryptattu}")
-                            await interaction.followup.send(f"Yhteenveto: \n Arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
+                            await interaction.followup.send(f"Yhteenveto: \n Oikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
                             break
                         else:
                             await interaction.followup.send(f"Kryptattu lause on nyt: {kryptattu}")
