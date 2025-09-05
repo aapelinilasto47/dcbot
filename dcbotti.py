@@ -155,20 +155,7 @@ client = Client(command_prefix='!', intents=intents)
 
 GUILD_ID = discord.Object(id=548149996462145546)
 
-def kryptaa_lause(lause):
-    lause = lause.lower()
-    kirjaimet = sorted(set([c for c in lause if c.isalpha()]))
-    arvotut_numerot = random.sample(range(10, 100), len(kirjaimet))  # numerot 1–99
-    kirjain_numero = dict(zip(kirjaimet, arvotut_numerot))
 
-    kryptattu = []
-    for merkki in lause:
-        if merkki.isalpha():
-            kryptattu.append(str(kirjain_numero[merkki]))
-        else:
-            kryptattu.append(merkki)  # säilytetään välilyönnit, pilkut yms.
-
-    return ' '.join(kryptattu), kirjain_numero
     
     
     
@@ -219,10 +206,6 @@ async def valitse(interaction: discord.Interaction, vaihtoehdot: str):
     await interaction.response.send_message(f"Valitsen siis jonkun näistä: {vaihtoehdot}")
     await interaction.followup.send(f"Valitsen: {valinta}!")
 
-@client.tree.command(name="ape", description="Tarkista apen parisuhdestatus!", guild=GUILD_ID)
-async def ape(interaction: discord.Interaction):
-    aika = datetime.now() - datetime(2021, 9, 1)
-    await interaction.response.send_message(f"Ape on ollut sinkku vuodesta 2021 lähtien! Apen viimeisestä parisuhteesta on siis {aika.days} päivää. Sen aikana on ehtinyt tapahtua vaikka mitä. Tässä lista asioista, jotka ovat tapahtuneet apen sinkkuuden aikana: \n1. Ape ehti käydä armeijassa, töissä, sivarissa ja aloittaa koulun \n2. Cape ja Jani ehti muuttaa pois kotoa ja hankkia kumppaneita ja lemmikkejä \n3. Krisun penis ehti kasvaa 2 milliä \n4. Jokke ehti käydä armeijassa KOLME kertaa \n5. Jokke ehti saada syyhyn, parantua siitä ja hankkia kumppanin ja erota sen kaa jo kerran \n6. Jokerit ehti lähteä KHL:stä, vaihtaa kotihallia ja mennä Mestikseen  \n7. Man City ehti voittaa treblen ja 2 Valioliigaa  \n8. Trump ehti olla presidenttinä, hävitä vaalit ja päästä uudelleen presidentiksi \n9. Verstappen ehti voittaa 4 mestaruutta \n10. Krisu ehti käydä armeijan, olla työttömänä, hankkia kumppanin ja löytää vakkariduunin")
 
 @client.tree.command(name="nyt", description="Kertoo nykyisen ajan", guild=GUILD_ID)
 async def nyt(interaction: discord.Interaction):
@@ -556,103 +539,6 @@ async def vitsi(interaction: discord.Interaction, kuka: str):
         await interaction.response.send_message(f"Hei {kuka}! {r1}")
 
 
-@client.tree.command(name='krypto', description='Ratkaise kryptattu lause!', guild=GUILD_ID)
-async def krypto(interaction: discord.Interaction):
-    with open("Sanakrypto_lauseet.txt", "r") as f:
-        kryptot = f.readlines()
-        k1 = kryptot[randint(0,len(kryptot)-1)]
-        kryptattu, avain = kryptaa_lause(k1)
-        vihjeet = 0
-        väärät = 0
-        yritykset = 0
-        k2 = k1.replace(" ", "")
-        k2 = k2.lower()
-
-
-    await interaction.response.send_message(f"Tervetuloa krypto-sanapeliin {interaction.user.mention}!\n Kryptattu lause on: {kryptattu} \n Arvaa kirjain kirjoittamalla ensin kirjain ja sitten numero! esim. a 1 \n Voit myös arvata koko lausetta kirjoittamalla ensin lause, jonka jälkeen voit syöttää arvauksesi.\n Jos haluat vihjeen, kirjoita vihje. Vihje paljastaa satunnaisen kirjaimen! \n Jos haluat lopettaa pelin, kirjoita lopeta!")
-
-    
-    while True:
-        response = await client.wait_for("message")
-        if response.author == interaction.user:
-            if response.content.lower() == "vihje":
-                lista = list(avain.keys())
-                vihje = random.choice(lista)
-                if len(lista) == 0:
-                    await interaction.followup.send("Ei enää vihjeitä!")
-                    continue
-                else:
-                    await interaction.followup.send(f"Vihje: {vihje} = {avain[vihje]}")
-                    vihjeet += 1
-                    await interaction.followup.send(f"Vihjeitä käytetty: {vihjeet}")
-                
-                continue
-            elif response.content.lower() == "lause":
-                await interaction.followup.send(f"Kirjoita lause, jonka haluat arvata!")
-                response = await client.wait_for("message")
-                if response.author == interaction.user:
-                    response = response.content.lower()
-                    rsp = str(response)
-                    rsp1 = rsp.replace(" ", "")
-                    
-
-                    if rsp1.strip() == k2.strip():
-                        yritykset += 1
-                        await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {k1}")
-                        await interaction.followup.send(f"Yhteenveto: \n Oikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
-                        break
-                    else:
-                        await interaction.followup.send("Väärin! Yritä uudelleen!")
-                        väärät += 1
-                        await interaction.followup.send(f"Väärät vastaukset: {väärät}")
-                        continue
-                elif response.author.bot == True:
-                    continue
-                else:
-                    await interaction.followup.send("Et voi osallistua tähän peliin!")
-                    continue
-                
-        
-            elif response.content.lower() == "lopeta":
-                await interaction.followup.send(f"Peli lopetettu! Kryptattu lause oli: {k1}")
-                await interaction.followup.send(f"Yhteenveto: \n Oikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
-                break
-            else:
-                try:
-                    kirjain, numero = response.content.split()
-                    numero = int(numero)
-                    if avain[kirjain] == int(numero):
-                        await interaction.followup.send(f"Oikein! ✅")
-                        del avain[kirjain]
-                        
-                        yritykset += 1
-                        kryptattu = kryptattu.replace(str(numero), kirjain)
-                        krypt1 = kryptattu.replace("  ", "")
-                        krypt1 = krypt1.replace(" ", "")
-                        
-                        
-                        if  krypt1.split() == k2.split():
-                            await interaction.followup.send(f"Voitit! 🎉 Kryptattu lause oli: {k1}")
-                            await interaction.followup.send(f"Yhteenveto: \n Oikeat arvaukset: {yritykset}\nVihjeet: {vihjeet}\nVäärät vastaukset: {väärät}")
-                            break
-                        else:
-                            await interaction.followup.send(f"Kryptattu lause on nyt: {kryptattu}")
-                            continue
-                        
-                    else:
-                        await interaction.followup.send("Väärin! Yritä uudelleen!")
-                        väärät += 1
-                        await interaction.followup.send(f"Väärät vastaukset: {väärät}")
-                        continue
-                except ValueError:
-                    await interaction.followup.send("Virheellinen syöte! Kirjoita ensin kirjain ja sitten numero! esim. a 1")
-                    
-                    
-        elif response.author.bot == True:
-            continue
-        else:
-            await interaction.followup.send(f"Et voi osallistua {response.author.mention}! Tämä on käyttäjän {interaction.user.mention} peli!")
-            continue
 
 
 
@@ -666,6 +552,7 @@ async def main():
 if __name__ == "__main__":
     import asyncio
     asyncio.run(main())  # Ajetaan pääfunktio asynkronisesti
+
 
 
 
