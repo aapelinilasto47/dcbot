@@ -31,7 +31,7 @@ t.daemon = True
 t.start()
 
 
-DISCORD_TOKEN = "MTMzMDg2NDE2MDUyNzA5Mzg5Mw.G1I7M5.vkf_UU21pwQ7YkDYGXe5hIoWpqiuksYg0xnRNE"
+DISCORD_TOKEN = ---
 
 krisu = 312961264286695424
 jani = 277091775812861952
@@ -96,12 +96,11 @@ class Client(commands.Bot):
             await message.channel.send(f'Okei mut aatelkaa kui noloo ois olla tää äijä ---> {message.author}')
 
         if "tuhma botti" in message.content:
-            await message.channel.send(f'Mmmh miten tuhma? 🤤')
+            
             await message.add_reaction('🤭')
 
 
-        if message.content == 'homo':
-            await message.channel.send(f'En oo homo ku oli sukat jalas')
+
 
         if message.author.id == 1366534715485589514:
             await message.reply('😐bro got the whole squad laughing')
@@ -110,37 +109,8 @@ class Client(commands.Bot):
             await message.reply('nadal atm')
 
 
-        if 'neeker' in message.content:
-            await message.channel.send(f'{message.author} <--- tämä henkilö on rasisti')
 
-        if 'nigg' in message.content:
-            await message.channel.send(f'{message.author} <--- tämä henkilö on rasisti')
-
-        if 'fortnite' in message.content.lower():
-            viesti = "☝️😃Number One#️⃣1️⃣Victory Royale🏆🥇Yeah, Fortnite🏕️we bout to👇get down (get down)⬇️Ten🔟kills☠️on🔛the board🎯right now⏱️Just wiped out💥Tomato🍅Town🏡My friend👯‍♂️just got🙇🏻‍♂️downed😱I revived💉him😇now we’re heading🏃🏃‍♂️south🧭bound⬇️Now we’re in👉the Pleasent😊Park🏞️streets🏘️Look👀at the map🗺️go to the mark✅sheet📝Take me🤝to your Xbox🎮📺to play🕹️Fortnite🏕️today📅You can take🤝me🏃‍♂️to Moist💦Mire🐊but not🙅🏻‍♂️Loot💰Lake🌊🤢I'd really love❤️🥰to chug jug🍻with you😳👉👈We can be pro😎Fortnite🏕️gamers👾🎮🕹️"
-            await message.channel.send(viesti)
-
-        if 'samppa' in message.content.lower():
-            viesti1 = f"If <@{samppa}> has a million fans, then I am one of them. If <@{samppa}> has ten fans, then I am one of them. If <@{samppa}> has only one fan then that is me. If <@{samppa}> has no fans, then that means I am no longer on earth. If the world is against <@{samppa}>, then I am against the world."
-            await message.channel.send(viesti1)
-
-        if 'paavi' in message.content.lower():
-            v2 = f"🪦 RIP 💀 to FREAKY 🫦 POPE ✝️ FRANCIS 👴 who partied 💃 too hard 🍆 👀 this 4️⃣ /2️⃣ 0️⃣ 🌬️ 🌿 and got too LIT 🚬 on EASTER 🐰 and has sadly pASSed 🍑 on 🪦 from this life 🌎 at 8️⃣ 8️⃣ years old 👴 Now ‼️ he can sanctify ✝️ some SLUTS 👧 up ⬆️ in heaven 👼 with his 👀 side 👀 piece ❤️ JESUS 🙇‍♂️ CHRIST ✝️ He 🧑 will be fondlingly 🥵 remembered 🤔 as the FREAKIEST 😈 pope 😫 who NEVER 🚫 touched 👐 little boys 🧒 AND ‼️ made sure 💡 to show 🔍 LOVE ❤️ to everyone 🏳️‍🌈 around 🍑 the world 🌎 So get 👐 your bread 🍞 and eat 🤤 the BUSSY 🍑 of Christ ✝️ and drink 🤤 some cummy 💦 wine 🍷 for CUMMUNION 💦 💦 to ensure 🙏 your pASSage 🍑 to heaven 👼 with good 🤗 ole' FRANCIS 👴 Send 💌 this to ➡️ your 🔟 most ✝️ CHRISTLY 👼 CUNTS 👭 and if you 🫵 get 0️⃣ back 🍑 you're 🫵 a 👹 HEAVENLESS 👿 WHORE 🍆 👅 if you 🫵 get 5️⃣ back ⬅️ you're 🫵 a NAUGHTY 🥵 LITTLE 🤏 ALTER 🕺 BOY 😳 and if you 🫵 get 🔟 back you're 😜 a REAL 🔥 SPIRITUAL ✝️ SLUT 💦"
-            await message.channel.send(v2)
-
-        if 'treffi' in message.content.lower():
-            v3 = f"Not gonna be active on Discord tonight. I'm meeting a girl (a real one) in half an hour (wouldn't expect a lot of you to understand anyway) so please don't DM me asking me where I am (im with the girl, ok) you'll most likely get aired because i'll be with the girl (again I don't expect you to understand) shes actually really interested in me and its not a situation i can pass up for some meaningless Discord degenerates (because i'll be meeting a girl, not that you really are going to understand) this is my life now. Meeting women and not wasting my precious time online, I have to move on from such simple things and branch out (you wouldnt understand)"
-            await message.channel.send(v3)
-
-        if 'tyttö' in message.content.lower():
-            v4 = f"No way 🤯 girl on discord? 🧐 Howdy I didn't expect to see no girl round dees parts 🤠 allow me to introduce myself to you mlady 😤 you can call me Jamal and I'll call you my kitten 🤓 I moderate multiple discord servers y'know I'm a man of high status 😁 I've been looking for some female companionship lately 🤗 and since my mother has thrown me out of the basement I'm not an independent person 😎 some may even refer to me as a big boy ☺️ I live in a homeless shelter tho 🤧 and I have no job 😄 I have hobbies such as reddit and discord and anime so I'm quirky like that 😵‍💫I live of disability benefits which I spend on funko pops and anime figurines 🤑 the homeless shelter however does not allow me more than 5 hours of reddit time so it's literally 1984 😓 but please give me a chance mlady cuz I just need you to cook me food and let me live in your house and give me money and change my diapers and pay for my Nitro 🤩 Other than that I am a nice guy 😍"
-            await message.channel.send(v4)
-
-        if 'kitten' in message.content.lower():
-            v5 = f"❤️ Rules for discord Kitten: ❤️ 1. Bedtime on school nights is 11:00 pm. 2. Bedtime on weekends is 2 am. 3. Eat at least TWO meals a day. 4. Eat one healthy snack each day. 5. No self-harm. Come talk to Daddy if you need support! 6. No lying to Daddy. 7. Respect Daddy 8. ALWAYS ask for permission before taking pills. 9. You must compliment yourself at least once per day. 10. Do not let other boys (or girls) lust after you — You BELONG to Daddy!!! 11. No drinking without permission. 12. No drugs. 13. No eating after 8 pm. 14. You may not please yourself out side of playtime with daddy. Daddy may make exceptions to the aforementioned rules, Kitten may not. Disobeying Daddys rules will result in punishment."
-            await message.channel.send(v5)
-
-        if "homoseksi" in message.content.lower():
+        if "pusu" in message.content.lower():
             await message.channel.send(file=discord.File("download.gif"))
             
         await self.process_commands(message)
@@ -696,5 +666,6 @@ async def main():
 if __name__ == "__main__":
     import asyncio
     asyncio.run(main())  # Ajetaan pääfunktio asynkronisesti
+
 
 
