@@ -153,7 +153,7 @@ intents.message_content = True
 client = Client(command_prefix='!', intents=intents)
 
 
-GUILD_ID = discord.Object(id=548149996462145546)
+GUILD_ID = discord.Object(id=-)
 
 
     
@@ -552,6 +552,7 @@ async def main():
 if __name__ == "__main__":
     import asyncio
     asyncio.run(main())  # Ajetaan pääfunktio asynkronisesti
+
 
 
 
