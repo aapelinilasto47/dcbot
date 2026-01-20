@@ -70,7 +70,7 @@ class Client(commands.Bot):
 
 
         try:
-            guild = discord.Object(id=548149996462145546)
+            guild = discord.Object(id=-)
             synced = await self.tree.sync(guild=guild)
             print(f'Synced {len(synced)} commands to guild {guild.id}')
 
@@ -552,6 +552,7 @@ async def main():
 if __name__ == "__main__":
     import asyncio
     asyncio.run(main())  # Ajetaan pääfunktio asynkronisesti
+
 
 
 
